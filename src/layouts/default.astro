@@ -1,0 +1,28 @@
+---
+import "@/styles/global.css";
+import "@fontsource/geist-sans/400";
+import "@fontsource/geist-sans/700";
+import "@fontsource/geist-sans/900";
+import logo from "@/assets/logo.svg";
+import Navbar from "@/components/navbar.astro";
+import Footer from "@/components/footer.astro";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href={logo.src} />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>STOODIO</title>
+	</head>
+	<body
+		class="flex flex-col"
+	>
+		<Navbar/>
+		<main class="container flex-1">
+			<slot/>
+		</main>
+		<Footer/>
+	</body>
+</html>
