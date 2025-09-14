@@ -5,6 +5,7 @@
     "@astrojs/cloudflare": "^12.6.8",
     "@astrojs/react": "^4.3.1",
     "@fontsource/geist-sans": "^5.2.5",
+    "@lucide/astro": "^0.544.0",
     "@tailwindcss/vite": "^4.1.13",
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.9",

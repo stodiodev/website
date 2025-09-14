@@ -6,6 +6,7 @@
         "@astrojs/cloudflare": "^12.6.8",
         "@astrojs/react": "^4.3.1",
         "@fontsource/geist-sans": "^5.2.5",
+        "@lucide/astro": "^0.544.0",
         "@tailwindcss/vite": "^4.1.13",
         "@types/react": "^19.1.12",
         "@types/react-dom": "^19.1.9",
@@ -205,6 +206,8 @@
     "@jridgewell/sourcemap-codec": ["@jridgewell/sourcemap-codec@1.5.5", "", {}, "sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og=="],
 
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.31", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw=="],
+
+    "@lucide/astro": ["@lucide/astro@0.544.0", "", { "peerDependencies": { "astro": "^4 || ^5" } }, "sha512-A1OMIplo44RLQ5MefvXOMwHOnR1w/Dvk7q7W0LlKYwwV8pfBavU0nQecyb2rPkIt9dLTd4XfBUFRKCE+1r5gjA=="],
 
     "@oslojs/encoding": ["@oslojs/encoding@1.1.0", "", {}, "sha512-70wQhgYmndg4GCPxPPxPGevRKqTIJ2Nh4OkiMWmDAVYsTQ+Ta7Sq+rPevXyXGdzr30/qZBnyOalCszoMxlyldQ=="],
 

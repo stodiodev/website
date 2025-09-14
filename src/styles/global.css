@@ -83,8 +83,23 @@
 	filter: drop-shadow(6px 6px 0px var(--color-primary));
 }
 
+@utility wave-box {
+	--mask:
+		radial-gradient(2.06rem at 50% 2.5rem,#000 99%,#0000 101%) calc(50% - 4rem) 0/8rem 51% repeat-x,
+		radial-gradient(2.06rem at 50% -0.5rem,#0000 99%,#000 101%) 50% 2rem/8rem calc(51% - 2rem) repeat-x,
+		radial-gradient(2.06rem at 50% calc(100% - 2.5rem),#000 99%,#0000 101%) calc(50% - 4rem) 100%/8rem 51% repeat-x,
+		radial-gradient(2.06rem at 50% calc(100% + 0.5rem),#0000 99%,#000 101%) 50% calc(100% - 2rem)/8rem calc(51% - 2rem) repeat-x;
+	-webkit-mask: var(--mask);
+	mask: var(--mask);
+	filter: drop-shadow(-6px -6px 0px rgba(0,0,0,1));
+}
+
 a {
 	@apply underline-offset-4;
+}
+
+@utility card {
+	@apply retro-shadow border-[2.5px]
 }
 
 @utility btn {
