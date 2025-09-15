@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 @plugin "daisyui" {
 	themes: stoodio --default;
 };
@@ -96,6 +97,14 @@
 
 a {
 	@apply underline-offset-4;
+}
+
+@utility link-hover {
+	@apply decoration-dotted !underline;
+
+	&:hover {
+		@apply decoration-solid decoration-2;
+	}
 }
 
 @utility card {
