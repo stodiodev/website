@@ -1,6 +1,7 @@
 ---
 import Layout from "@/layouts/default.astro";
-import { AwardIcon, ComponentIcon, PaintbrushVerticalIcon, PhoneIcon, ShieldCheckIcon } from "@lucide/astro";
+import { AwardIcon, ComponentIcon, ExternalLinkIcon, PaintbrushVerticalIcon, PhoneIcon, ShieldCheckIcon } from "@lucide/astro";
+import { FaGithub as GitHubIcon } from "react-icons/fa";
 import { PriceCalculator } from "@/components/price-calculator";
 ---
 
@@ -84,6 +85,24 @@ import { PriceCalculator } from "@/components/price-calculator";
 				</div>
 			</div>
 		</div>
+	</div>
+
+	<div class="container mt-16 text-center flex flex-col items-center justify-center gap-4">
+		<p class="text-base-content/75">
+			Codul nostru este verificat zilnic folosind
+		</p>
+		<p class="flex flex-row justify-center items-center gap-1 text-5xl sm:text-6xl md:text-7xl">
+			<GitHubIcon/>
+			CodeQL
+		</p>
+		<a
+			href="https://codeql.github.com"
+			class="btn btn-outline decoration-dashed underline mt-4"
+			target="_blank"
+		>
+			<ExternalLinkIcon/>
+			Afla mai multe
+		</a>
 	</div>
 
 	<div class="container mt-16">
