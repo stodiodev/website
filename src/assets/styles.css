@@ -1,0 +1,87 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "daisyui" {
+	themes: stodio --default;
+	logs: false;
+};
+
+@plugin "daisyui/theme" {
+	name: "stodio";
+	default: true;
+	prefersdark: true;
+	color-scheme: "dark";
+	--color-base-100: oklch(0% 0 0);
+	--color-base-200: oklch(20% 0 0);
+	--color-base-300: oklch(26% 0 0);
+	--color-base-content: oklch(100% 0 0);
+	--color-primary: oklch(100% 0 0);
+	--color-primary-content: oklch(0% 0 0);
+	--color-secondary: oklch(43% 0 0);
+	--color-secondary-content: oklch(100% 0 0);
+	--color-accent: oklch(100% 0 0);
+	--color-accent-content: oklch(0% 0 0);
+	--color-neutral: oklch(100% 0 0);
+	--color-neutral-content: oklch(0% 0 0);
+	--color-info: oklch(74% 0.16 232.661);
+	--color-info-content: oklch(29% 0.066 243.157);
+	--color-success: oklch(79% 0.209 151.711);
+	--color-success-content: oklch(26% 0.065 152.934);
+	--color-warning: oklch(85% 0.199 91.936);
+	--color-warning-content: oklch(28% 0.066 53.813);
+	--color-error: oklch(71% 0.202 349.761);
+	--color-error-content: oklch(28% 0.109 3.907);
+	--radius-selector: 0rem;
+	--radius-field: 0rem;
+	--radius-box: 0rem;
+	--size-selector: 0.28125rem;
+	--size-field: 0.28125rem;
+	--border: 2px;
+	--depth: 1;
+	--noise: 0;
+}
+
+@theme {
+	--font-sans: "Geist Sans", sans-serif;
+}
+
+@layer base {
+	* {
+		@apply border-base-content;
+	}
+	body {
+		@apply bg-base-100 text-base-content min-h-svh;
+	}
+}
+
+@utility container {
+	margin-inline: auto;
+	padding-inline: 1.5rem;
+	max-width: 1200px;
+}
+
+@utility wave-box {
+	--mask:
+		radial-gradient(2.06rem at 50% 2.5rem,#000 99%,#0000 101%) calc(50% - 4rem) 0/8rem 51% repeat-x,
+		radial-gradient(2.06rem at 50% -0.5rem,#0000 99%,#000 101%) 50% 2rem/8rem calc(51% - 2rem) repeat-x,
+		radial-gradient(2.06rem at 50% calc(100% - 2.5rem),#000 99%,#0000 101%) calc(50% - 4rem) 100%/8rem 51% repeat-x,
+		radial-gradient(2.06rem at 50% calc(100% + 0.5rem),#0000 99%,#000 101%) 50% calc(100% - 2rem)/8rem calc(51% - 2rem) repeat-x;
+	-webkit-mask: var(--mask);
+	mask: var(--mask);
+	filter: drop-shadow(-6px -6px 0px rgba(0,0,0,1));
+}
+
+a {
+	@apply underline-offset-4;
+}
+
+@utility link-hover {
+	@apply decoration-dotted !underline;
+
+	&:hover {
+		@apply decoration-solid decoration-2;
+	}
+}
+
+@utility card {
+	@apply border-[2.5px]
+}

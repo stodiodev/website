@@ -1,0 +1,76 @@
+{
+	"$schema": "https://raw.githubusercontent.com/denoland/deno/refs/heads/main/cli/schemas/config-file.v1.json",
+	"nodeModulesDir": "auto",
+	"tasks": {
+		"check": "deno fmt --check . && deno lint . && deno check",
+		"dev": "vite",
+		"prerender": "echo \"import '@m4rocks/fresh-cloudflare-ssg'\" | deno run -A -",
+		"build": "mkdir -p _fresh && echo \"export default {}\" > _fresh/server.js && vite build && deno task prerender",
+		"start": "deno serve -A _fresh/server.js",
+		"update": "deno run -A -r jsr:@fresh/update ."
+	},
+	"lint": {
+		"rules": {
+			"tags": [
+				"fresh",
+				"recommended"
+			]
+		}
+	},
+	"fmt": {
+		"indentWidth": 4,
+		"useTabs": true
+	},
+	"exclude": [
+		"**/_fresh/*"
+	],
+	"imports": {
+		"@/": "./src/",
+		"@calcom/embed-react": "npm:@calcom/embed-react@^1.5.3",
+		"@cloudflare/vite-plugin": "npm:@cloudflare/vite-plugin@^1.13.8",
+		"@deno/gfm": "jsr:@deno/gfm@^0.11.0",
+		"@fontsource/geist-sans": "npm:@fontsource/geist-sans@^5.2.5",
+		"@m4rocks/fresh-cloudflare-ssg": "jsr:@m4rocks/fresh-cloudflare-ssg@^0.1.10",
+		"@std/fs": "jsr:@std/fs@^1.0.19",
+		"@std/path": "jsr:@std/path@^1.1.2",
+		"@tailwindcss/typography": "npm:@tailwindcss/typography@^0.5.19",
+		"daisyui": "npm:daisyui@^5.1.26",
+		"fresh": "jsr:@fresh/core@^2.1.1",
+		"lucide-preact": "npm:lucide-preact@^0.544.0",
+		"preact": "npm:preact@^10.27.2",
+		"@preact/signals": "npm:@preact/signals@^2.3.1",
+		"@fresh/plugin-vite": "jsr:@fresh/plugin-vite@^1.0.4",
+		"vite": "npm:vite@^7.1.3",
+		"tailwindcss": "npm:tailwindcss@^4.1.10",
+		"@tailwindcss/vite": "npm:@tailwindcss/vite@^4.1.12"
+	},
+	"compilerOptions": {
+		"lib": [
+			"dom",
+			"dom.asynciterable",
+			"dom.iterable",
+			"deno.ns"
+		],
+		"jsx": "precompile",
+		"jsxImportSource": "preact",
+		"jsxPrecompileSkipElements": [
+			"a",
+			"img",
+			"source",
+			"body",
+			"html",
+			"head",
+			"title",
+			"meta",
+			"script",
+			"link",
+			"style",
+			"base",
+			"noscript",
+			"template"
+		],
+		"types": [
+			"vite/client"
+		]
+	}
+}
