@@ -1,16 +1,16 @@
 import { define } from "@/lib/utils.ts";
 import Footer from "@/components/footer.tsx";
 import Navbar from "@/components/navbar.tsx";
-import { Partial } from "fresh/runtime";
+// import { Partial } from "fresh/runtime";
 
 export default define.layout(({ Component }) => {
 	return (
-		<body class="flex flex-col" f-client-nav>
+		<body class="flex flex-col" f-client-nav={false}>
 			<Navbar/>
 			<main class="flex-1">
-				<Partial name="page-content">
+				{/* <Partial name="page-content"> */}
 					<Component/>
-				</Partial>
+				{/* </Partial> */}
 			</main>
 			<Footer/>
 		</body>

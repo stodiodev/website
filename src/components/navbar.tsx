@@ -1,4 +1,4 @@
-import logo from "@/assets/logo.svg";
+import logo from "@/assets/logo-inverted.svg";
 
 export default function Navbar() {
 	return (
@@ -10,7 +10,6 @@ export default function Navbar() {
 			>
 				<a
 					href="/"
-					class="bg-primary"
 				>
 					<img
 						src={logo}
