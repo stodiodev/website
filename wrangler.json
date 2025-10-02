@@ -1,7 +1,7 @@
 {
 	"name": "stodio",
 	"compatibility_date": "2025-10-01",
-	"main": "./_fresh/server.js",
+	"main": "./server.js",
 	"assets": {
 		"directory": "./_fresh/client"
 	}

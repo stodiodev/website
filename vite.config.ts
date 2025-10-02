@@ -7,9 +7,9 @@ export default defineConfig({
 	server: {
 		port: 3000
 	},
-	plugins: [fresh({
+	plugins: [cloudflare(), fresh({
 		routeDir: "./src/routes",
 		islandsDir: "./src/components/islands",
 		clientEntry: "./src/client.ts"
-	}), tailwindcss(), cloudflare()],
+	}), tailwindcss()],
 });
