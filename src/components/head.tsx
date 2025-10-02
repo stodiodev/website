@@ -9,7 +9,7 @@ export default function Head(props: HeadProps) {
 		<HeadFresh>
 			<title>
 				{props.title ? `${props.title} · ` : null}
-				STOODIO
+				STODIO
 			</title>
 		</HeadFresh>
 	)

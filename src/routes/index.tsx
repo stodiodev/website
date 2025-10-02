@@ -24,7 +24,7 @@ export default define.page(function Home() {
 					</a>
 					<a
 						href="/about"
-						class="btn btn-accent"
+						class="btn"
 					>
 						Mai multe
 					</a>

@@ -33,11 +33,11 @@
 	--radius-selector: 0rem;
 	--radius-field: 0rem;
 	--radius-box: 0rem;
-	--size-selector: 0.28125rem;
-	--size-field: 0.28125rem;
-	--border: 2px;
+	--size-selector: 0.25rem;
+	--size-field: 0.25rem;
+	--border: 1px;
 	--depth: 1;
-	--noise: 0;
+	--noise: 1;
 }
 
 @theme {
