@@ -2,7 +2,13 @@
 	"name": "stodio",
 	"compatibility_date": "2025-10-01",
 	"main": "./server.js",
+	"build": {
+		"command": "curl -fsSL https://deno.land/install.sh | sh && /opt/buildhome/.deno/bin/deno install --allow-scripts && /opt/buildhome/.deno/bin/deno task build"
+	},
 	"assets": {
 		"directory": "./_fresh/client"
+	},
+	"vars": {
+		"SKIP_DEPENDENCY_INSTALL": "1"
 	}
 }
