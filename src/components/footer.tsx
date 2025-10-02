@@ -1,4 +1,5 @@
 import Steps from "@/assets/layered-steps.svg";
+import CarbonBadge from "./carbon-badge.tsx";
 
 export default function Footer() {
 	const currentYear = new Date().getFullYear();
@@ -17,7 +18,7 @@ export default function Footer() {
 					<p class="font-bold mb-2 text-lg">
 						STOODIO &copy; {currentYear} Savin Angel-Mario
 					</p>
-					<div class="footer sm:footer-horizontal">
+					<div class="footer sm:footer-horizontal mb-2">
 						<nav>
 							<h6 class="footer-title">Legal</h6>
 							<a href="/privacy" class="link link-hover">TESTConfidentialitate</a>
@@ -29,6 +30,7 @@ export default function Footer() {
 							<a href="https://facebook.com/stoodioro" class="link link-hover">TESTFacebook</a>
 						</nav>
 					</div>
+					<CarbonBadge/>
 				</div>
 				<img
 					src="logo.svg"

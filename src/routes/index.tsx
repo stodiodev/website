@@ -8,7 +8,7 @@ export default define.page(function Home() {
 	return (
 		<>
 			<Head />
-			<div class="h-96 flex flex-col justify-center gap-2 container">
+			<div class="h-128 flex flex-col justify-center gap-2 container">
 				<h1
 					class="text-5xl md:text-7xl font-black"
 				>
@@ -23,7 +23,7 @@ export default define.page(function Home() {
 						Hai sa vorbim
 					</a>
 					<a
-						href="/about"
+						href="#about"
 						class="btn"
 					>
 						Mai multe
@@ -31,7 +31,7 @@ export default define.page(function Home() {
 				</div>
 			</div>
 
-			<div class="wave-box py-32 bg-primary">
+			<div class="wave-box py-32 bg-primary" id="about">
 					<div class="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
 						<div class="card bg-base-100">
 							<div class="card-body">

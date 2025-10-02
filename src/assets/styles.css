@@ -51,6 +51,9 @@
 	body {
 		@apply bg-base-100 text-base-content min-h-svh;
 	}
+	html {
+		@apply scroll-smooth;
+	}
 }
 
 @utility container {
