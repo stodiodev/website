@@ -10,5 +10,11 @@
 	},
 	"vars": {
 		"SKIP_DEPENDENCY_INSTALL": "1"
+	},
+	"observability": {
+		"logs": {
+			"enabled": true
+		},
+		"enabled": true
 	}
 }
