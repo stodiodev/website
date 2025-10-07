@@ -5,7 +5,7 @@
 		"check": "deno fmt --check . && deno lint . && deno check",
 		"dev": "vite",
 		"prerender": "echo \"import '@m4rocks/fresh-cloudflare-ssg'\" | deno run -A -",
-		"build": "mkdir -p _fresh && echo \"export default {}\" > _fresh/server.js && vite build",
+		"build": "mkdir -p _fresh && echo \"export default {}\" > _fresh/server.js && vite build && cp -r ./_fresh/client/* ./.vercel/output/static",
 		"start": "deno serve -A _fresh/server.js",
 		"update": "deno run -A -r jsr:@fresh/update ."
 	},

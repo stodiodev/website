@@ -13,5 +13,20 @@ export default defineConfig({
 		routeDir: "./src/routes",
 		islandsDir: "./src/components/islands",
 		clientEntry: "./src/client.ts"
-	}), tailwindcss(), freshSSG()]
+	}), tailwindcss(), vercel(), freshSSG()],
+	vercel: {
+		distContainsOnlyStatic: true,
+		rewrites: [
+			{ source: "/:path", destination: "/:path.html" },
+			{ source: "/(.*)", destination: "/api/handler" }
+		],
+		cleanUrls: true,
+		trailingSlash: false,
+		additionalEndpoints: [
+			{
+				source: "./handler.js",
+				destination: "/api/handler"
+			}
+		],
+	}
 });
