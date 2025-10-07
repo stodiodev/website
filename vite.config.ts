@@ -13,5 +13,5 @@ export default defineConfig({
 		routeDir: "./src/routes",
 		islandsDir: "./src/components/islands",
 		clientEntry: "./src/client.ts"
-	}), tailwindcss(), freshSSG()],
+	}), tailwindcss(), freshSSG()]
 });
