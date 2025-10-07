@@ -1,6 +1,6 @@
 {
 	"$schema": "https://openapi.vercel.sh/vercel.json",
-	"outputDirectory": "_fresh",
+	"outputDirectory": "_fresh/client",
 	"rewrites": [
 		{ "source": "/(.*)", "destination": "/_fresh/client/$1" },
 		{ "source": "/(.*)", "destination": "/api/handler" }
