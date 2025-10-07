@@ -1,7 +1,7 @@
 import CalEmbed from "@/components/islands/cal-embed.tsx";
 import { define } from "@/lib/utils.ts";
 
-export const prerender = true;
+export const prerender = false;
 
 export default define.page(function Contact() {
 	return (
