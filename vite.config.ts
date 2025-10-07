@@ -14,4 +14,12 @@ export default defineConfig({
 		islandsDir: "./src/components/islands",
 		clientEntry: "./src/client.ts"
 	}), tailwindcss(), vercel(), freshSSG()],
+	vercel: {
+		additionalEndpoints: [
+			{
+				source: "./vercel-endpoint/handler.js",
+				destination: "/api/handler"
+			}
+		]
+	}
 });
