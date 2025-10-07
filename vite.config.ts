@@ -15,11 +15,15 @@ export default defineConfig({
 		clientEntry: "./src/client.ts"
 	}), tailwindcss(), vercel(), freshSSG()],
 	vercel: {
+		distContainsOnlyStatic: false,
+		rewrites: [
+			{ source: "/(.*)", destination: "/api/handler" }
+		],
 		additionalEndpoints: [
 			{
 				source: "./vercel-endpoint/handler.js",
 				destination: "/api/handler"
 			}
-		]
+		],
 	}
 });
