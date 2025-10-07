@@ -19,3 +19,4 @@ dist/
 
 # macOS
 .DS_store
+.vercel
