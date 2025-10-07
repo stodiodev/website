@@ -1,3 +1,3 @@
-import server from "../_fresh/server/server-entry.mjs";
+import server from "../_fresh/server.js";
 
 export default server.fetch;
