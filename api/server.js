@@ -1,5 +1,7 @@
 import server from "../_fresh/server.js";
 
-export default {
-  fetch: server.fetch,
+export const config = {
+  runtime: 'edge', // this is a pre-requisite
 };
+
+export default server.fetch;
