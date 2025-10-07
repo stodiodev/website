@@ -17,6 +17,7 @@ export default defineConfig({
 	vercel: {
 		distContainsOnlyStatic: false,
 		rewrites: [
+			{ source: "/:path((?!api/).*)", destination: "/:path.html" },
 			{ source: "/(.*)", destination: "/api/handler" }
 		],
 		additionalEndpoints: [
