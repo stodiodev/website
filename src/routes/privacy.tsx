@@ -2,7 +2,7 @@ import { render } from "@deno/gfm";
 import { define } from "@/lib/utils.ts";
 import Head from "@/components/head.tsx";
 
-export const prerender = true;
+export const prerender = false;
 
 export default define.page(async function Privacy() {
 	const content = await Deno.readTextFile("./PRIVACY.md");
