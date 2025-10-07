@@ -1,6 +1,7 @@
 import { define } from "@/lib/utils.ts";
 
 export default define.page(function App({ Component }) {
+	console.log("RENDERED")
 	return (
 		<html lang="ro" class="bg-primary">
 			<head>

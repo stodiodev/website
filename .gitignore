@@ -11,6 +11,7 @@ _fresh/
 node_modules/
 vendor/
 .vite/
+.vercel/
 
 # wrangler
 .wrangler/

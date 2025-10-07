@@ -5,7 +5,7 @@
 		"check": "deno fmt --check . && deno lint . && deno check",
 		"dev": "vite",
 		"prerender": "echo \"import '@m4rocks/fresh-cloudflare-ssg'\" | deno run -A -",
-		"build": "mkdir -p _fresh && echo \"export default {}\" > _fresh/server.js && vite build && deno task prerender",
+		"build": "mkdir -p _fresh && echo \"export default {}\" > _fresh/server.js && vite build",
 		"start": "deno serve -A _fresh/server.js",
 		"update": "deno run -A -r jsr:@fresh/update ."
 	},
@@ -30,7 +30,7 @@
 		"@cloudflare/vite-plugin": "npm:@cloudflare/vite-plugin@^1.13.8",
 		"@deno/gfm": "jsr:@deno/gfm@^0.11.0",
 		"@fontsource/geist-sans": "npm:@fontsource/geist-sans@^5.2.5",
-		"@m4rocks/fresh-cloudflare-ssg": "jsr:@m4rocks/fresh-cloudflare-ssg@^0.1.10",
+		"@m4rocks/fresh-ssg": "jsr:@m4rocks/fresh-ssg@^0.2.1",
 		"@std/fs": "jsr:@std/fs@^1.0.19",
 		"@std/path": "jsr:@std/path@^1.1.2",
 		"@tailwindcss/typography": "npm:@tailwindcss/typography@^0.5.19",
@@ -42,7 +42,8 @@
 		"@fresh/plugin-vite": "jsr:@fresh/plugin-vite@^1.0.4",
 		"vite": "npm:vite@^7.1.7",
 		"tailwindcss": "npm:tailwindcss@^4.1.10",
-		"@tailwindcss/vite": "npm:@tailwindcss/vite@^4.1.12"
+		"@tailwindcss/vite": "npm:@tailwindcss/vite@^4.1.12",
+		"vite-plugin-vercel": "npm:vite-plugin-vercel@^9.0.7"
 	},
 	"compilerOptions": {
 		"lib": [
